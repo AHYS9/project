@@ -1,0 +1,32 @@
+.container {
+    width: 300px; /* 根据需要调整容器宽度 */
+    overflow: hidden; /* 清除浮动 */
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+    float: left; /* 默认浮动到左侧 */
+    background-color: #f0f0f0;
+}
+
+.box.float-right {
+    float: right; /* 浮动到右侧 */
+}
+
+.box.float-left {
+    float: left; /* 明确指定浮动到左侧，虽然这是默认值 */
+}
+
+/* 为不同的盒子设置不同的背景颜色 */
+.box:nth-child(1), .box:nth-child(2) {
+    background-color: #ffcc00;
+}
+
+.box:nth-child(3), .box:nth-child(4), .box:nth-child(5), .box:nth-child(6), .box:nth-child(7), .box:nth-child(8) {
+    background-color: #00ccff;
+}
