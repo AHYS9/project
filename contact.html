@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>联系我们-PassItOn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="headerp">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" width="150px" height="50px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="products.html">产品</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                        <li><a href="account.html">账号</a></li>
+                    </ul>
+                </nav>
+                <div class="cart">
+                    <a href="shopping-cart.html">
+                        <img src="images/cart.png" width="30px" height="30px">
+                        <span id="cart-count">0</span>
+                    </a>
+                </div>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+    
+
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>联系我们</h2>
+        </div>
+        
+        <div class="contact-container">
+            <div class="col-2">
+                <h3>联系方式</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 地址: 厦门华侨大学集美区</p>
+                <p><i class="fas fa-phone"></i> 电话: (086) 1234-5678</p>
+                <p><i class="fas fa-envelope"></i> 邮箱: contact@passiton.com</p>
+                <p><i class="fas fa-clock"></i> 工作时间: 周一至周五 9:00-18:00</p>
+                
+                <div class="social-media">
+                    <h3>社交媒体</h3>
+                    <a href="#"><i class="fab fa-weixin"></i> 微信</a>
+                    <a href="#"><i class="fab fa-qq"></i> QQ</a>
+                    
+                </div>
+            </div>
+            
+            <div class="col-2">
+                <h3>留言给我们</h3>
+                <form class="contact-form">
+                    <input type="text" placeholder="您的姓名" required>
+                    <input type="email" placeholder="您的邮箱" required>
+                    <input type="text" placeholder="主题">
+                    <textarea placeholder="您的留言" required></textarea>
+                    <button type="submit" class="btn">发送留言</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <h3>常见问题</h3>
+            <div class="faq-item">
+                <h4>如何出售我的衣物?</h4>
+                <p>登录您的账户，点击"出售物品"按钮，上传物品照片和信息，我们的团队会审核并定价。</p>
+            </div>
+            <div class="faq-item">
+                <h4>物品多久能卖出?</h4>
+                <p>通常物品会在1-2周内售出，热门物品可能更快。您可以随时登录查看销售状态。</p>
+            </div>
+            <div class="faq-item">
+                <h4>如何提现?</h4>
+                <p>销售成功后，款项会存入您的PassItOn钱包，您可以随时提现到绑定的支付宝或银行账户。</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="images/logo.png">
+                    <p>每件衣服都值得第二次青春</p>
+                </div>
+                <div class="footer-col-2">
+                    <h4>实用链接</h4>
+                    <ul>
+                        <li>优惠券</li>
+                        <li>博客文章</li>
+                        <li>退换政策</li>
+                        <li>加入分销计划</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li>Wechat</li>
+                        <li>QQ</li>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+        
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('cart-count').textContent = cart.length;
+        }
+        window.onload = updateCartCount;
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</body>
+</html>

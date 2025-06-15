@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>首页-PassItOn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="test.js"></script>
+</head>
+<body>
+
+    <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="150px" height="50px">
+            </div>
+            <nav>
+                <ul  id="MenuItems">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="products.html">产品</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="account.html">账号</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <a href="/shopping-cart.html">
+                <img src="/images/cart.png" width="30px" height="30px">
+                <span id="cart-count">0</span>
+            </a>
+            </div>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+        
+<div class="carousel-container">
+    <div class="carousel">
+        
+        <div class="carousel-item active">
+            <div class="row">
+                <div class="col-2">
+                    <h1>PassItOn</h1>
+                    <p>每件衣服都值得第二次青春</p>
+                    <a href="" class="btn">关于我们 &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/imagel.png" alt="PassItOn Banner">
+                </div>
+            </div>
+        </div>
+       
+        
+        
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-2">
+                    <h1>Sustainable <br>Fashion</h1>
+                    <p>让时尚更环保</p>
+                    <a href="products.html" class="btn">去购物 &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/fashion.png" alt="Sustainable Fashion">
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-2">
+                    <h1>Join Us</h1>
+                    <p>出售闲置衣物，或淘到独特二手好物</p>
+                    <a href="products.html?new=1" class="btn">加入我们的社区 &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/joinus.png" alt="New Arrivals">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+    
+    
+    <div class="carousel-indicators">
+        <span class="indicator active" onclick="currentSlide(1)"></span>
+        <span class="indicator" onclick="currentSlide(2)"></span>
+        <span class="indicator" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+        </div>
+    </div>
+
+
+
+
+    <div class="small-container">
+        <h2 class="title">最新商品</h2>
+        <div class="row">
+            <div class="col-3">
+                <a href="product/product-details-ghoodie.html">
+                <img src="images/Men/ghoodie1.jpeg">
+                <h3>黑色查普曼大学连帽衫</h3>
+                <p>15.00元</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="product/product-details-boots.html">
+                <img src="images/Women/boots1.jpeg">
+                <h3>女士黑色短靴</h3>
+                <p>30.00元</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="product/product-details-fshirt.html">
+                <img src="images/Men/fshirt1.jpeg">
+                <h3>足球T恤</h3>
+                <p>25.00元</p>
+            </a>
+            </div>
+            <div class="col-3">
+                <a href="product/product-details-bshort.html">
+                <img src="images/Women/bshort1.jpeg">
+                <h3>黑色牛仔短裤</h3>
+                <p>10.00元</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="small-container">
+        <h2 class="title">男士产品</h2>
+        <div class="row">
+            <div class="col-3">
+                <a href="product/product-details-ghoodie.html">
+                <img src="images/Men/ghoodie1.jpeg">
+                <h3>黑色查普曼大学连帽衫</h3>
+                <p>15.00元</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="product/product-details-gsweater.html">
+                <img src="images/Men/gsweater1.jpeg">
+                <h3>灰色运动卫衣</h3>
+                <p>35.00元</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="product/product-details-fshirt.html">
+                <img src="images/Men/fshirt1.jpeg">
+                <h3>足球T恤</h3>
+                <p>25.00元</p>
+                </a>
+           
+            </div>
+            <div class="col-3">
+                <a href="product/producty-details-hoodie.html">
+                <img src="images/Men/hoodie1.jpeg">
+                <h3>灰色连帽衫</h3>
+                <p>35.00元</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="small-container">
+        <h2 class="title">女士产品</h2>
+        <div class="row">
+            <div class="col-3">
+                <a href="product/product-details-cshoes.html">
+                <img src="images/Women/classic-shoes1.jpeg">
+                <h3>黑色皮鞋</h3>
+                <p>10.00元</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="product/product-details-boots.html">
+                <img src="images/Women/boots1.jpeg">
+                <h3>女士黑色短靴</h3>
+                <p>30.00元</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="product/product-details-pull.html">
+                <img src="images/Women/pull1.jpeg">
+                <h3>多色拼接连帽外套</h3>
+                <p>20.00元</p>
+            </a>
+            </div>
+            <div class="col-3">
+                <a href="product/product-details-bshort.html">
+                <img src="images/Women/bshort1.jpeg">
+                <h3>黑色牛仔短裤</h3>
+                <p>10.00元</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="../images/logo.png">
+                    <p>每件衣服都值得第二次青春</p>
+                </div>
+                <div class="footer-col-2">
+                    <h4>实用链接</h4>
+                    <ul>
+                        <li>优惠券</li>
+                        <li>博客文章</li>
+                        <li>退换政策</li>
+                        <li>加入分销计划</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li>Wechat</li>
+                        <li>QQ</li>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                </div>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight ="0px";
+
+        function menutoggle(){
+            if (MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else
+            {
+                 MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <script>
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    document.getElementById('cart-count').textContent = cart.length;
+  }
+
+  window.onload = updateCartCount;
+</script>
+
+
+<script>
+    
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function moveSlide(n) {
+        showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+        let i;
+        const slides = document.getElementsByClassName("carousel-item");
+        const dots = document.getElementsByClassName("indicator");
+        
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        
+        for (i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+        }
+        
+        for (i = 0; i < dots.length; i++) {
+            dots[i].classList.remove("active");
+        }
+        
+        slides[slideIndex-1].classList.add("active");
+        dots[slideIndex-1].classList.add("active");
+        
+        
+        const carousel = document.querySelector('.carousel');
+        carousel.style.transform = `translateX(-${(slideIndex-1) * 100}%)`;
+    }
+    
+    
+    setInterval(() => {
+        moveSlide(1);
+    }, 5000);
+</script>
+
+</body>
+</html>

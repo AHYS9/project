@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="headerp">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="150px" height="50px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="products.html">产品</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="account.html">账号</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <a href="shopping-cart.html">
+                <img src="images/cart.png" width="30px" height="30px">
+                <span id="cart-count">0</span>
+            </a>
+            </div>
+            <img src="images/menu.png" class="menu-icon" 
+            onclick="menutoggle()">
+        </div>
+    </div>
+
+
+    <div class="cart-container">
+        <h2>您的购物车</h2>
+        <div id="cart-items-container"></div>
+        <div id="cart-total" class="cart-total"></div>
+        <div class="cart-actions">
+            <a href="products.html" class="btn">继续购物</a>
+            <a href="#" class="btn" id="checkout-btn">立即支付</a>
+        </div>
+    </div>
+</div>
+        <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="../images/logo.png">
+                    <p>每件衣服都值得第二次青春</p>
+                </div>
+                <div class="footer-col-2">
+                    <h4>实用链接</h4>
+                    <ul>
+                        <li>优惠券</li>
+                        <li>博客文章</li>
+                        <li>退换政策</li>
+                        <li>加入分销计划</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li>Wechat</li>
+                        <li>QQ</li>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                </div>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        function displayCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const container = document.getElementById('cart-items-container');
+            const totalContainer = document.getElementById('cart-total');
+            const cartCount = document.getElementById('cart-count');
+
+            cartCount.textContent = cart.length;
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-cart">
+                        <p>您的购物车没有商品</p>
+                        <a href="products.html" class="btn">浏览商品</a>
+                    </div>
+                `;
+                totalContainer.innerHTML = '';
+                return;
+            }
+
+            let html = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                html += `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="item-details">
+                            <h3>${item.name}</h3>
+                            <p>${item.price}元</p>
+                        </div>
+                        <button class="remove-btn" onclick="removeItem(${index})">删除</button>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+            totalContainer.innerHTML = `<strong>总计: ${total}元</strong>`;
+        }
+
+        
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+
+        
+        document.getElementById('checkout-btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            if (confirm('确认结算？')) {
+                localStorage.removeItem('cart');
+                displayCart();
+                alert('感谢您的购买！');
+            }
+        });
+
+        
+        window.onload = displayCart;
+    </script>
+</body>
+</html>

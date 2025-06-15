@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>产品-PassItOn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="test.js"></script>
+</head>
+<body>
+
+   <div class="headerp">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="150px" height="50px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="../products.html">产品</a></li>
+                    <li><a href="../about.html">关于我们</a></li>
+                    <li><a href="../contact.html">联系我们</a></li>
+                    <li><a href="../account.html">账号</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <a href="../shopping-cart.html">
+                <img src="../images/cart.png" width="30px" height="30px">
+                <span id="cart-count">0</span>
+            </a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+        
+        </div>
+    </div>
+
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>所有产品</h2>
+            <select id="sort-by" onchange="sortProducts()">
+                <option value="default">综合</option>
+                <option value="price-asc">价格低到高</option>
+                <option value="price-desc">价格高到低</option>
+                <option value="men">男士衣服</option>
+                <option value="women">女士衣服</option>
+            </select>
+                
+            
+        </div>
+        <div class="row">
+            <div class="col-3" data-product-id="ghoodie">
+                <a href="product/product-details-ghoodie.html">
+                <img src="images/Men/ghoodie1.jpeg">
+                <h3>黑色查普曼大学连帽衫</h3>
+                <p>15.00元</p>
+                </a>
+            </div>
+            <div class="col-3" data-product-id="boots1">
+                <a href="product/product-details-boots.html">
+                <img src="images/Women/boots1.jpeg">
+                <h3>女士黑色短靴</h3>
+                <p>30.00元</p>
+                </a>
+            </div>
+            <div class="col-3" data-product-id="fshirt">
+                <a href="product/product-details-fshirt.html">
+                <img src="images/Men/fshirt1.jpeg">
+                <h3>足球T恤</h3>
+                <p>25.00元</p>
+            </a>
+            </div>
+            <div class="col-3" data-product-id="bshort">
+                <a href="product/product-details-bshort.html">
+                <img src="images/Women/bshort1.jpeg">
+                <h3>黑色牛仔短裤</h3>
+                <p>10.00元</p>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-3" data-product-id="gsweater">
+                <a href="product/product-details-gsweater.html">
+                <img src="images/Men/gsweater1.jpeg">
+                <h3>灰色运动卫衣</h3>
+                <p>35.00元</p>
+                </a>
+            </div>
+            <div class="col-3" data-product-id="hoodie">
+                <a href="product/product-details-hoodie.html">
+                <img src="images/Men/hoodie1.jpeg">
+                <h3>灰色连帽衫</h3>
+                <p>35.00元</p>
+                </a>
+            </div>
+            <div class="col-3" data-product-id="pull">
+                <a href="product/product-details-pull.html">
+                <img src="images/Women/pull1.jpeg">
+                <h3>多色拼接连帽外套</h3>
+                <p>20.00元</p>
+                </a>
+            </div>
+            <div class="col-3" data-product-id="cshoes">
+                <a href="product/product-details-cshoes.html">
+                <img src="images/Women/classic-shoes1.jpeg">
+                <h3>黑色皮鞋</h3>
+                <p>25.00元</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3" data-product-id="pants">
+                <a href="product/product-details-pants.html">
+                <img src="images/Men/pants1.jpeg">
+                <h3>黑色长裤子</h3>
+                <p>22.00元</p>
+                </a>
+            </div>
+            <div class="col-3" data-product-id="polo">
+                <a href="product/product-details-polo.html">
+                <img src="images/Men/polo1.jpeg">
+                <h3>粉色马球衫</h3>
+                <p>15.00元</p>
+                </a>
+            </div>
+            <div class="col-3" data-product-id="sportwear">
+                <a href="product/product-details-sportwear.html">
+                <img src="images/Women/sportwear1.jpeg">
+                <h3>运动衣</h3>
+                <p>20.00元</p>
+                </a>
+            </div>
+            <div class="col-3" data-product-id="gsweaterf">
+                <a href="product/product-details-gsweaterf.html">
+                <img src="images/Women/gsweater1.jpeg">
+                <h3>灰色外套</h3>
+                <p>45.00元</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+
+        </div>
+    </div>
+</div>
+
+
+   <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="/images/logo.png">
+                    <p>每件衣服都值得第二次青春</p>
+                </div>
+                <div class="footer-col-2">
+                    <h4>实用链接</h4>
+                    <ul>
+                        <li>优惠券</li>
+                        <li>博客文章</li>
+                        <li>退换政策</li>
+                        <li>加入分销计划</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li>Wechat</li>
+                        <li>QQ</li>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                </div>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
